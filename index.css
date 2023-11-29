@@ -160,15 +160,15 @@ button {
 
 img {
     width: 125%;
-    mix-blend-mode:exclusion ;
-    filter: invert(1) grayscale(1);
-    -webkit-filter:brightness(1) invert(1) grayscale(1);
-
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    opacity: .5;
 
 }
 
 img:hover {
-    width: 150%;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
 
 }
 
@@ -179,11 +179,13 @@ img:hover {
     background-color: rgba(255, 255, 255, 0.3);
     font-weight: 700;
     position: absolute;
-    top: 72%;
+    top: 75%;
+    opacity: .5;
 }
 
 .copy-hex:hover{
-    font-size: 1.35em;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
 }
 
 .lock-toggle.is-locked {
@@ -196,7 +198,8 @@ img:hover {
     font-weight: 800;
 	text-align: center;
     position: absolute;
-    bottom:16%;
+    z-index: 0;
+    bottom:13%;
     height: 4%;
     background-color: rgba(255, 255, 255, 0.3);
     width:10%; 
@@ -206,10 +209,9 @@ img:hover {
 
 
 .text-input:hover {
-    font-size: 1.65em;
-	text-align: center;
-    position: absolute;
-    cursor: pointer;
+
+
+    background-color: rgba(255, 255, 255, 0.5);
 
 }
 
@@ -227,9 +229,19 @@ input[type="color"]::-webkit-color-swatch {
 
 .colour-input{
     position: relative;
-    top:33%;
+    top:35.5%;
+    z-index: 4;
+    opacity: .5;
+    cursor: pointer;
 
 }
+
+.colour-input:hover{
+
+    opacity: 0;
+
+}
+
 
 }
 
