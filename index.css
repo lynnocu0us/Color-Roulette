@@ -52,7 +52,7 @@ main {
 
 
     .generator-button {
-        position: relative;
+        position: absolute;
         left: 90%;
         bottom: 40px;
         font-size: inherit;
@@ -70,6 +70,7 @@ main {
     
     
     h1 {
+        margin: 2.5%;
         color: var(--dark);
         font-size: 3rem;
         font-weight: 900;
@@ -78,18 +79,21 @@ main {
     }
 
     h4 {
+        margin: 2.5%;
         color: var(--grey);
         font-size: 1.5rem;
         text-transform: uppercase;
     }
     
     p {
+        margin: 0 2.5%;
         color: var(--grey);
         font-size: 1.125rem;
   
     }
 
     nav{
+        height: 15%;
         box-shadow: 10px 5px 5px #45516433;
         width: 100%;
         position: absolute;
@@ -158,7 +162,7 @@ img {
     width: 125%;
     mix-blend-mode:exclusion ;
     filter: invert(1) grayscale(1);
-    -webkit-filter:brightness(.7) invert(1) grayscale(1);
+    -webkit-filter:brightness(1) invert(1) grayscale(1);
 
 
 }
@@ -168,18 +172,14 @@ img:hover {
 
 }
 
-
-
 .copy-hex{
+    border-radius: 5px;
+    width:5%;
+    height: 4%;
+    background-color: rgba(255, 255, 255, 0.3);
     font-weight: 700;
     position: absolute;
     top: 72%;
-    background: inherit;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    filter: invert(1) grayscale(1);
-    -webkit-filter:brightness(1) invert(1) grayscale(1);
 }
 
 .copy-hex:hover{
@@ -197,14 +197,10 @@ img:hover {
 	text-align: center;
     position: absolute;
     bottom:16%;
-    background-color: #45516433;
-    background: inherit;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    filter: invert(1) grayscale(1);
-    -webkit-filter:brightness(.7) invert(1) grayscale(1);
-    width:10%;
+    height: 4%;
+    background-color: rgba(255, 255, 255, 0.3);
+    width:10%; 
+    border-radius: 5px;;
 
 }
 
