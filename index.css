@@ -266,6 +266,7 @@ input[type="color"]::-webkit-color-swatch {
         font-size: 2rem;
         font-weight: 900;
         text-transform: uppercase;
+        display: none;
 
     }
 
@@ -274,6 +275,7 @@ input[type="color"]::-webkit-color-swatch {
         color: var(--grey);
         font-size: 1.5rem;
         text-transform: uppercase;
+
     }
     
     p {
@@ -288,9 +290,12 @@ input[type="color"]::-webkit-color-swatch {
 
         box-shadow: 10px 5px 5px #45516433;
         width: 100%;
-        position: relative;
+        height: 10%;
+        top: 100%;
+        position: absolute;
         z-index: 400;
         background-color: white;
+        text-align: center;
     
     }
 
@@ -300,9 +305,11 @@ input[type="color"]::-webkit-color-swatch {
     
 
     .colours {
+        position: absolute;
         display: flex;
         flex-wrap: wrap;
         height: 100%;
+
         
     }
 
@@ -314,12 +321,15 @@ input[type="color"]::-webkit-color-swatch {
     height:20%;
 	padding: 0.5rem 1rem;
 	background-color: var(--dark);
-	color: #fff;
+	color: #000;
 }
 
 .colour.copied {
-	border: 2px solid red;
+	opacity: .5;
 }
+
+
+
 
 button, input {
 	appearance: none;
@@ -344,27 +354,142 @@ button {
 	opacity: 1;
 }
 
+
 .colour-input {
 	text-align: center;
-    font-size: 1.5em;
+    left: 100px;
+    position: relative;
+    z-index: 40;
+
+}
+
+img {
+    position: relative;
+}
+
+button.copy-hex {
+    position: relative;
 }
 
 .generator-button {
-    
-	color: var(--primary);
-	font-size: inherit;
-	font-weight: 700;
-	background: linear-gradient(to bottom right, var(--primary), var(--secondary));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-
+    text-align: center;
+    color: #ee2525;
+    text-shadow: -4px 4px #f8a662, -8px 8px #F8EB26, -12px 12px #88E771, -16px 16px #335dd1;
+    font-size: 2.5em;
 }
 
 .generator-button:hover {
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+
+    animation-name: hover;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 
+
+
+
+
+@keyframes hover {
+    20%   {color:#f8a662 ;
+        text-shadow: -4px 4px #F8EB26, -8px 8px  #88E771 , -12px 12px #335dd1, -16px 16px #ee2525;}
+40%  {color:#F8EB26;
+text-shadow: -4px 4px #88E771 , -8px 8px  #335dd1  , -12px 12px  #ee2525 , -16px 16px #f8a662;}
+60%  {color:#88E771;
+text-shadow: -4px 4px #335dd1, -8px 8px #ee2525  , -12px 12px #f8a662 , -16px 16px #F8EB26;}
+80% {color:#335dd1 ;
+text-shadow: -4px 4px #ee2525, -8px 8px  #f8a662 , -12px 12px #F8EB26, -16px 16px #88E771;}
+100% {color: #ee2525;
+text-shadow: -4px 4px #f8a662, -8px 8px #F8EB26, -12px 12px #88E771, -16px 16px #335dd1;}
+
+}
+
+
+img {
+    width: 125%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    opacity: .5;
+
+}
+
+img:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+
+}
+
+.copy-hex{
+    border-radius: 5px;
+    width:80px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: 700;
+    position: absolute;
+    opacity: .5;
+}
+
+.copy-hex:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
+.lock-toggle.is-locked {
+	opacity: 1;
+
+}
+
+.colour-input{
+    position: relative;
+    opacity: .5;
+    cursor: pointer;
+
+}
+
+.colour-input:hover{
+
+    opacity: 0;
+
+}
+
+.text-input {
+    text-align: center;
+    font-size: 1.25em;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    z-index: 0;
+    width: 100px;
+    right:55px;
+    
+}
+
+.text-input:hover {
+
+
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+input[type="color"]{
+    width: 120px;
+    height: 90px;
+    position: relative;
+    left: 55px;
+    
+}
+
+
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
 
 
 }

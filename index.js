@@ -1,3 +1,5 @@
+//Assigning variables and calling classes 
+
 class Colour {
 	constructor(hex, element) {
 		this.hex = hex;
@@ -13,6 +15,7 @@ class Colour {
 		 
 
 	}
+	//IF statement: Changes the lock img
 
 	setLocked(locked) {
 		this.locked = locked;
@@ -36,10 +39,12 @@ class Colour {
 		}
 	}
 
+	
+
 	toggleLocked() {
 		this.setLocked(!this.locked);
 	}
-
+//Randomizing the "Hex"
 	generateHex() {
 		if (this.locked) {
 			return
@@ -54,6 +59,8 @@ class Colour {
 		this.setHex(color);
 	}
 
+
+	//Copy Hex input to clipboard
 	copyToClipboard() {
 		const input = this.element.querySelector(".text-input");
 		input.select();
@@ -67,6 +74,12 @@ class Colour {
 	}
 }
 
+function loseFocus() {
+	document.getElementsByClassName()("lock-toggle").blur();
+  }
+
+
+//How top "Lock" a color into place
 const colour_elements = document.querySelectorAll('.colours .colour');
 
 const colours = [];
