@@ -369,6 +369,7 @@ img {
 
 button.copy-hex {
     position: relative;
+font-size: 1.25em;
 }
 
 .generator-button {
